@@ -168,7 +168,7 @@ body {
   color: #000;
   line-height: 1;
   font-family: "Raleway";
-  font-size: 1.125rem;
+  font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -644,6 +644,9 @@ textarea.input {
 .header__container {
   padding: 20px 10px;
 }
+.header._header-scroll {
+  position: fixed;
+}
 .header__menu {
   display: flex;
   align-items: center;
@@ -866,11 +869,11 @@ textarea.input {
     z-index: 4;
   }
 
-  .menu__body._active {
+  .menu-open .menu__body {
     left: 0;
     padding: 0;
   }
-  .menu__body._active::before {
+  .menu-open .menu__body::before {
     content: "";
     position: fixed;
     top: 0;

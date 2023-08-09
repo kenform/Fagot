@@ -14835,22 +14835,15 @@
           document.documentElement.classList.add("loaded");
         }, 0);
       }),
-      (function () {
-        const e = document.querySelector(".icon-menu"),
-          t = document.querySelector(".menu__body");
-        e &&
-          e.addEventListener("click", function (i) {
-            a &&
-              (((e = 500) => {
-                document.documentElement.classList.contains("lock")
-                  ? o(e)
-                  : r(e);
-              })(),
-              document.documentElement.classList.toggle("menu-open"),
-              e.classList.toggle("_active"),
-              t.classList.toggle("_active"));
-          });
-      })(),
+      document.querySelector(".icon-menu") &&
+        document.addEventListener("click", function (e) {
+          a &&
+            e.target.closest(".icon-menu") &&
+            (((e = 500) => {
+              document.documentElement.classList.contains("lock") ? o(e) : r(e);
+            })(),
+            document.documentElement.classList.toggle("menu-open"));
+        }),
       (function () {
         if (document.querySelectorAll("[data-fullscreen]").length && t.any()) {
           function e() {
