@@ -1337,3 +1337,306 @@ main > .section:last-child {
     text-align: center !important;
   }
 }
+
+
+
+/* vp-mobile-final */
+html, body {
+  overflow-x: hidden !important;
+}
+
+body {
+  min-height: 100%;
+}
+
+/* все основные блоки поверх декора */
+main, header, footer, .header, .footer, .section, .page-hero, .card, .service-item, .doctor-card,
+.doctor-card-large, .price-card, .contact-card, .appointment, .appointment-strip, .profile-hero,
+.service-detail, .service-main, .about-intro {
+  position: relative;
+  z-index: 1;
+}
+
+/* мягкий мед-фон */
+.vp-ornaments {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.vp-orb {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(24, 162, 112, 0.08);
+  border: 1px solid rgba(24, 162, 112, 0.09);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 30px rgba(15, 45, 70, 0.05);
+  backdrop-filter: blur(2px);
+  border-radius: 999px;
+  animation: vpFloat 15s ease-in-out infinite;
+  user-select: none;
+}
+
+.vp-orb--a { width: 42px; height: 42px; left: 4%; top: 18%; font-size: 20px; animation-delay: 0s; }
+.vp-orb--b { width: 56px; height: 56px; right: 6%; top: 34%; font-size: 24px; animation-delay: 2s; }
+.vp-orb--c { width: 48px; height: 48px; left: 8%; bottom: 18%; font-size: 22px; animation-delay: 1s; }
+.vp-orb--d { width: 36px; height: 36px; right: 14%; bottom: 24%; font-size: 18px; animation-delay: 4s; }
+.vp-orb--e { width: 40px; height: 40px; left: 48%; top: 58%; font-size: 18px; animation-delay: 3s; }
+
+@keyframes vpFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -10px, 0) rotate(4deg); }
+}
+
+/* немного аккуратнее текст */
+.section h1, .section h2, .page-hero h1, .section-head h2 {
+  text-wrap: balance;
+}
+
+.section p, .page-hero p, .section-head p, .card p, .service-item p, .doctor-card p, .price-card p {
+  text-wrap: pretty;
+}
+
+/* страховка по растягиванию карточек */
+.trust-grid, .services-grid, .doctors-grid, .prices-grid, .contacts-grid {
+  align-items: stretch;
+}
+
+.trust-grid .card, .service-item, .doctor-card, .doctor-card-large, .price-card, .contact-card {
+  height: 100%;
+}
+
+/* мобилка: финальный UX-полиш */
+@media (max-width: 720px) {
+  .vp-ornaments {
+    opacity: 0.45;
+  }
+
+  .vp-orb--a { left: -4px; top: 180px; width: 32px; height: 32px; font-size: 16px; }
+  .vp-orb--b { right: -6px; top: 390px; width: 38px; height: 38px; font-size: 18px; }
+  .vp-orb--c { left: -6px; bottom: 160px; width: 34px; height: 34px; font-size: 16px; }
+  .vp-orb--d { right: 8px; bottom: 240px; width: 28px; height: 28px; font-size: 14px; }
+  .vp-orb--e { display: none; }
+
+  .site-shell {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .header {
+    display: block !important;
+    text-align: center !important;
+    padding: 14px 12px !important;
+    border-radius: 24px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .logo {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .logo img {
+    max-width: 170px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .logo span {
+    display: none !important;
+  }
+
+  .nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+  }
+
+  .nav a {
+    min-height: 42px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 8px 10px !important;
+    font-size: 15px !important;
+    white-space: nowrap !important;
+  }
+
+  .nav a:last-child {
+    grid-column: 1 / -1 !important;
+    justify-self: center !important;
+    width: min(100%, 180px) !important;
+  }
+
+  .header-cta {
+    display: none !important;
+  }
+
+  .page-hero,
+  .section {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
+  h1 {
+    font-size: clamp(36px, 10.8vw, 52px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.03em !important;
+    text-align: center !important;
+  }
+
+  h2 {
+    font-size: clamp(28px, 8.2vw, 38px) !important;
+    line-height: 1.08 !important;
+    text-align: center !important;
+  }
+
+  .hero__content,
+  .section-head,
+  .appointment,
+  .appointment-strip,
+  .profile-hero,
+  .doctor-card,
+  .doctor-card-large,
+  .service-item,
+  .price-card,
+  .contact-card,
+  .trust-grid .card,
+  .about-intro,
+  .service-main,
+  .service-detail {
+    text-align: center !important;
+  }
+
+  .eyebrow,
+  .hero__actions,
+  .service-actions,
+  .doctor-actions,
+  .profile-actions {
+    justify-content: center !important;
+  }
+
+  .card,
+  .service-item,
+  .doctor-card,
+  .doctor-card-large,
+  .price-card,
+  .contact-card,
+  .appointment,
+  .appointment-strip,
+  .profile-hero,
+  .service-main,
+  .service-detail,
+  .about-intro {
+    padding: 22px 16px !important;
+    border-radius: 24px !important;
+  }
+
+  .trust-grid,
+  .services-grid,
+  .doctors-grid,
+  .prices-grid,
+  .contacts-grid {
+    gap: 16px !important;
+  }
+
+  .card .icon,
+  .service-icon,
+  .doctor-avatar,
+  .profile-avatar,
+  .contact-icon,
+  .price-chip,
+  .step-number,
+  .count,
+  .eyebrow {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .section h2,
+  .section-head h2,
+  .page-hero h1 {
+    max-width: 12ch !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .section p,
+  .hero__content p,
+  .section-head p,
+  .card p,
+  .service-item p,
+  .doctor-card p,
+  .price-card p,
+  .contact-card p {
+    max-width: 28ch !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero__stats,
+  .hero-meta,
+  .mini-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .footer {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    justify-items: center !important;
+    gap: 18px !important;
+    padding: 24px 18px !important;
+    border-radius: 24px !important;
+  }
+
+  .footer nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 260px !important;
+    margin: 0 auto !important;
+  }
+
+  .footer p,
+  .footer-contact {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .section h2,
+  .section-head h2 {
+    max-width: 11ch !important;
+  }
+
+  .section p,
+  .hero__content p,
+  .section-head p,
+  .card p,
+  .service-item p,
+  .doctor-card p {
+    max-width: 25ch !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vp-orb {
+    animation: none !important;
+  }
+}
