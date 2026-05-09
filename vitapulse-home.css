@@ -1040,3 +1040,300 @@ body {
     text-align: center !important;
   }
 }
+
+
+
+/* vp-final-polish */
+:root {
+  --shell-max: 1360px;
+}
+
+.site-shell {
+  width: min(100%, var(--shell-max)) !important;
+  padding-left: clamp(14px, 3vw, 32px) !important;
+  padding-right: clamp(14px, 3vw, 32px) !important;
+}
+
+main {
+  padding-bottom: 0 !important;
+}
+
+.logo {
+  flex-shrink: 0 !important;
+}
+
+.logo span {
+  display: none !important;
+}
+
+.logo img {
+  max-width: 210px !important;
+  height: auto !important;
+}
+
+.header {
+  max-width: 100% !important;
+}
+
+.page-hero {
+  padding-top: clamp(42px, 6vw, 82px) !important;
+  padding-bottom: clamp(18px, 2.5vw, 34px) !important;
+}
+
+.section {
+  padding-top: clamp(28px, 4vw, 56px) !important;
+  padding-bottom: clamp(28px, 4vw, 56px) !important;
+}
+
+main > .section:last-child {
+  padding-bottom: clamp(14px, 2vw, 30px) !important;
+}
+
+.contact-main + .section {
+  padding-top: 14px !important;
+  padding-bottom: 22px !important;
+}
+
+.gallery {
+  margin-top: 0 !important;
+}
+
+.gallery img {
+  height: clamp(220px, 22vw, 300px) !important;
+}
+
+.footer {
+  margin-top: clamp(22px, 3vw, 38px) !important;
+}
+
+.footer p {
+  max-width: 420px;
+}
+
+.price-note {
+  margin-top: 18px !important;
+  margin-bottom: 0 !important;
+}
+
+.appointment-strip {
+  margin-top: 0 !important;
+}
+
+.trust-grid .card,
+.service-item {
+  text-align: left !important;
+}
+
+.trust-grid .card .icon,
+.service-item .service-icon {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.price-card,
+.contacts-grid .contact-card {
+  text-align: center !important;
+}
+
+.price-card small,
+.contacts-grid .contact-icon {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.profile-hero {
+  overflow: hidden !important;
+}
+
+.profile-info h1 {
+  max-width: 820px !important;
+}
+
+.card,
+.footer,
+.header {
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .site-shell {
+    --shell-max: 1180px;
+  }
+
+  .section {
+    padding-top: 34px !important;
+    padding-bottom: 34px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-shell {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+
+  .header {
+    position: relative !important;
+    top: 0 !important;
+    display: block !important;
+    padding: 14px !important;
+    margin-bottom: 22px !important;
+    text-align: center !important;
+    border-radius: 24px !important;
+  }
+
+  .logo {
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 14px !important;
+  }
+
+  .logo img {
+    max-width: 188px !important;
+    margin: 0 auto !important;
+  }
+
+  .nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    overflow: visible !important;
+    justify-content: center !important;
+  }
+
+  .nav a {
+    min-width: 0 !important;
+    min-height: 42px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    padding: 9px 8px !important;
+    font-size: 13px !important;
+  }
+
+  .nav a:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 180px);
+  }
+
+  .header-cta {
+    display: none !important;
+  }
+
+  .page-hero {
+    padding-top: 26px !important;
+    padding-bottom: 18px !important;
+    text-align: center !important;
+  }
+
+  .section {
+    padding-top: 26px !important;
+    padding-bottom: 26px !important;
+  }
+
+  main > .section:last-child {
+    padding-bottom: 16px !important;
+  }
+
+  h1 {
+    font-size: clamp(34px, 10vw, 46px) !important;
+    line-height: 1.04 !important;
+  }
+
+  h2 {
+    font-size: clamp(27px, 8vw, 38px) !important;
+  }
+
+  .hero__content,
+  .section-head,
+  .service-item,
+  .trust-grid .card,
+  .doctor-card,
+  .doctor-card-large,
+  .profile-info,
+  .price-card,
+  .contact-card {
+    text-align: center !important;
+  }
+
+  .eyebrow,
+  .hero__actions,
+  .service-actions,
+  .doctor-actions,
+  .profile-actions {
+    justify-content: center !important;
+  }
+
+  .icon,
+  .service-icon,
+  .doctor-avatar,
+  .profile-avatar,
+  .avatar,
+  .contact-icon {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .service-main,
+  .service-detail,
+  .mini-price,
+  .about-intro,
+  .appointment,
+  .appointment-strip,
+  .profile-hero,
+  .card {
+    border-radius: 24px !important;
+  }
+
+  .profile-hero {
+    margin-top: 18px !important;
+    padding: 24px !important;
+    text-align: center !important;
+  }
+
+  .profile-avatar {
+    width: 112px !important;
+    height: 112px !important;
+    margin: 0 auto 8px !important;
+  }
+
+  .profile-info h1 {
+    text-align: center !important;
+  }
+
+  .contact-main + .section {
+    padding-top: 8px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .gallery {
+    gap: 12px !important;
+  }
+
+  .footer {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+    gap: 18px !important;
+    padding: 28px 22px !important;
+    border-radius: 26px !important;
+    margin-top: 24px !important;
+  }
+
+  .footer nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 260px !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-contact {
+    text-align: center !important;
+  }
+}
