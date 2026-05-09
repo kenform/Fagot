@@ -638,3 +638,405 @@ p {
     text-overflow: ellipsis;
   }
 }
+
+
+
+/* vp-mobile-rescue */
+body {
+  overflow-x: clip;
+}
+
+.logo img {
+  width: auto !important;
+  max-width: 210px !important;
+  height: auto !important;
+}
+
+.section {
+  padding-top: clamp(38px, 5vw, 72px) !important;
+  padding-bottom: clamp(38px, 5vw, 72px) !important;
+}
+
+.compact-hero,
+.page-hero {
+  padding-bottom: clamp(22px, 4vw, 42px) !important;
+}
+
+.footer {
+  margin-top: clamp(32px, 5vw, 58px) !important;
+  margin-bottom: 0 !important;
+}
+
+.service-overview {
+  padding-top: 18px !important;
+}
+
+.service-main {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 360px);
+  gap: 28px;
+  padding: clamp(26px, 4vw, 44px);
+  align-items: center;
+}
+
+.service-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.service-side {
+  display: grid;
+  gap: 12px;
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(237,247,244,.75);
+}
+
+.service-side strong {
+  font-size: 24px;
+  color: var(--text);
+}
+
+.service-side span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.service-tags span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.82);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 850;
+}
+
+.service-catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.service-item {
+  padding: 26px;
+}
+
+.service-icon,
+.icon,
+.doctor-avatar,
+.profile-avatar,
+.avatar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: rgba(38,201,141,.12);
+  color: var(--accent-dark);
+  font-weight: 950;
+  font-size: 22px;
+}
+
+.service-item a {
+  display: inline-flex;
+  margin-top: 8px;
+  color: var(--blue);
+  font-weight: 950;
+}
+
+.service-detail,
+.mini-price,
+.about-intro {
+  padding: clamp(28px, 5vw, 48px);
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.clean-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.clean-list li {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 800;
+}
+
+.mini-price {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.price-lines {
+  display: grid;
+  gap: 12px;
+}
+
+.price-lines div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(237,247,244,.75);
+}
+
+.price-lines span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.price-lines strong {
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 390px);
+  gap: 30px;
+}
+
+.about-stats {
+  display: grid;
+  gap: 12px;
+}
+
+.about-stats div {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(237,247,244,.76);
+}
+
+.about-stats strong,
+.about-stats span {
+  display: block;
+}
+
+.about-stats strong {
+  margin-bottom: 4px;
+  color: var(--text);
+  font-size: 20px;
+}
+
+.about-stats span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.price-card {
+  text-align: center;
+}
+
+.price-card small {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price-card .btn,
+.form-submit,
+.form .btn {
+  width: 100%;
+}
+
+.profile-info h1 {
+  max-width: 760px;
+}
+
+@media (max-width: 1024px) {
+  .service-main,
+  .service-detail,
+  .mini-price,
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .service-catalog {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-shell {
+    width: 100% !important;
+    padding: 12px !important;
+  }
+
+  .header {
+    display: block !important;
+    position: relative !important;
+    top: 0 !important;
+    padding: 14px !important;
+    margin-bottom: 26px !important;
+    text-align: center !important;
+    border-radius: 24px !important;
+  }
+
+  .logo {
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 14px !important;
+  }
+
+  .logo img {
+    max-width: 190px !important;
+  }
+
+  .nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    gap: 8px !important;
+  }
+
+  .nav a {
+    min-width: 0 !important;
+    min-height: 42px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    padding: 9px 7px !important;
+  }
+
+  .header-cta {
+    display: none !important;
+  }
+
+  .hero {
+    padding-top: 22px !important;
+    gap: 22px !important;
+  }
+
+  .hero__content,
+  .section-head,
+  .page-hero,
+  .card,
+  .service-item,
+  .price-card,
+  .doctor-card,
+  .doctor-card-large,
+  .profile-info,
+  .appointment__info {
+    text-align: center !important;
+  }
+
+  .hero__actions,
+  .service-actions,
+  .doctor-actions,
+  .profile-actions {
+    justify-content: center !important;
+  }
+
+  .hero__facts {
+    grid-template-columns: 1fr !important;
+  }
+
+  h1 {
+    font-size: clamp(36px, 11vw, 48px) !important;
+    line-height: 1.03 !important;
+  }
+
+  h2 {
+    font-size: clamp(28px, 8.5vw, 38px) !important;
+  }
+
+  .section {
+    padding-top: 34px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .service-catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .service-main,
+  .service-detail,
+  .mini-price,
+  .about-intro,
+  .appointment,
+  .profile-hero {
+    border-radius: 24px !important;
+    padding: 24px !important;
+  }
+
+  .price-lines div {
+    display: grid;
+    text-align: center;
+  }
+
+  .btn,
+  .service-actions .btn,
+  .profile-actions .btn,
+  .doctor-actions .btn {
+    width: 100% !important;
+  }
+
+  .profile-hero {
+    margin-top: 24px !important;
+    text-align: center !important;
+  }
+
+  .profile-avatar {
+    width: 112px !important;
+    height: 112px !important;
+    font-size: 36px !important;
+    margin: 0 auto 8px !important;
+  }
+
+  .profile-info h1 {
+    text-align: center !important;
+  }
+
+  .footer {
+    display: block !important;
+    text-align: center !important;
+    padding: 28px 22px !important;
+    border-radius: 26px !important;
+    margin-top: 32px !important;
+  }
+
+  .footer nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin: 22px 0 !important;
+    justify-content: center !important;
+  }
+
+  .footer nav a {
+    text-align: center !important;
+  }
+
+  .footer-contact {
+    text-align: center !important;
+  }
+}
