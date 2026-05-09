@@ -614,3 +614,27 @@ p {
     height: 190px;
   }
 }
+
+/* Mobile header fix */
+@media (max-width: 640px) {
+  .header {
+    display: block;
+  }
+
+  .logo {
+    margin-bottom: 14px;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+    gap: 6px;
+  }
+
+  .nav a {
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
